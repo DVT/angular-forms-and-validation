@@ -11,18 +11,13 @@ export class MinAgeDirective {
   constructor() { }
 
   validate(control: AbstractControl): {[key: string]: any} {
-    if (!control.value) {
-      return null;
-    }
+    /**
+     * Compare the current date with the date provided.
+     * Return an error object if the difference in years
+     * is less than 18.
+     */
 
-    const value = moment(control.value);
-    const today = moment();
-
-    if (value.isValid && today.diff(value, 'years') < 18) {
-      return { appMinAge: { value: control.value } };
-    }
-
-    return null;
+     throw Error('Not implemented');
   }
 
 }
