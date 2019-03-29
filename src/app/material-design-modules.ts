@@ -11,7 +11,6 @@ import {
   MatSelectModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatMomentDateModule,
   MatDialogModule
 } from '@angular/material';
 

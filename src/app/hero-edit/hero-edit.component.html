@@ -1,43 +1,27 @@
 <form fxLayout="column" fxFlex="100%" fxFlex.gt-sm="40%" [ngFormOptions]="{ updateOn: 'blur' }" (ngSubmit)="submit()">
   <mat-form-field>
     <mat-label>Name</mat-label>
-    <input matInput name="hero" [(ngModel)]="hero.name" required #name="ngModel">
-    <mat-error *ngIf="name.hasError('required')">
-      Name is required.
-    </mat-error>
+    <input matInput name="hero">
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Birth date</mat-label>
-    <input matInput [matDatepicker]="picker" matInput name="birthDate" [(ngModel)]="hero.birthDate" #birthDate="ngModel" required appMinAge>
+    <input matInput [matDatepicker]="picker">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
-    <mat-error *ngIf="birthDate.hasError('required')">
-      Birth date is required.
-    </mat-error>
-
-    <mat-error *ngIf="birthDate.hasError('appMinAge')">
-      Super heroes must be 18 years or older.
-    </mat-error>
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Universe</mat-label>
-    <mat-select matInput name="universe" [ngModelOptions]="{ updateOn: 'change' }" [(ngModel)]="hero.universe" #universe="ngModel" required>
+    <mat-select matInput name="universe">
       <mat-option value="DC">DC</mat-option>
       <mat-option value="Marvel">Marvel</mat-option>
     </mat-select>
-    <mat-error *ngIf="universe.hasError('required')">
-     Universe is required.
-    </mat-error>
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Abilities</mat-label>
-    <textarea matInput name="abilities" [(ngModel)]="hero.abilities" #abilities="ngModel" required matInput></textarea>
-    <mat-error *ngIf="abilities.hasError('required')">
-      Abilities are required.  
-    </mat-error>
+    <textarea matInput name="abilities" matInput></textarea>
   </mat-form-field>
 
   <div fxLayout="row" fxLayoutAlign="flex-end" fxLayoutGap="8px">
