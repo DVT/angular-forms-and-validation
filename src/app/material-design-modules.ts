@@ -11,7 +11,8 @@ import {
   MatSelectModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatMomentDateModule
+  MatMomentDateModule,
+  MatDialogModule
 } from '@angular/material';
 
 export const modules = [
@@ -26,5 +27,6 @@ export const modules = [
   MatSelectModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatMomentDateModule
+  MatMomentDateModule,
+  MatDialogModule
 ];
