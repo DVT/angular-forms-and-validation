@@ -1,0 +1,30 @@
+<form fxLayout="column" fxFlex="100%" fxFlex.gt-sm="40%">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Birth date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Universe</mat-label>
+    <mat-select>
+      <mat-option [value]="DC">DC</mat-option>
+      <mat-option [value]="Marvel">Marvel</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Abilities</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutAlign="flex-end" fxLayoutGap="8px">
+    <button type="submit" mat-flat-button color="primary">Add</button>
+  </div>
+</form>
